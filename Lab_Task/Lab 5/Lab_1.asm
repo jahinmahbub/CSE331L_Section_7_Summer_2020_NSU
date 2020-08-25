@@ -5,7 +5,7 @@
 .DATA
   PROMPT_1 DB 'Enter the First Digit: $'
   PROMPT_2 DB 'Enter The Second Digit: $'
-  PROMPT_3 DB 'Difference:$'
+  PROMPT_3 DB 'Sum:$'
 
   VALUE_1 DB ?
   VALUE_2 DB ?
@@ -61,9 +61,9 @@
     
     
     MOV AL, VALUE_1
-    SUB AL, VALUE_2
+    ADD AL, VALUE_2
     
-    Add AL, 30H
+    ADD AL, 30H
     
     MOV AH, 2
     MOV DL,AL
